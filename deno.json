@@ -1,0 +1,30 @@
+{
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "dev:react": "deno bundle --platform=browser ./pb_hooks/app/client.tsx > ./pb_public/assets/js/client.min.js",
+    "dev:tailwind": "deno run -A --unstable npm:@tailwindcss/cli -i ./pb_hooks/app/globals.css -o ./pb_public/assets/css/client.min.css --watch",
+    "dev:pb": "./pocketbase serve --dev",
+    "dev": "deno run -A npm:nodemon --exec 'deno task dev:react' --watch pb_hooks -e jsx,tsx & deno task dev:pb & deno task dev:tailwind",
+    "build:react": "deno bundle --minify --platform=browser ./pb_hooks/app/client.tsx > ./pb_public/assets/js/client.min.js",
+    "build:tailwind": "deno run -A --unstable npm:@tailwindcss/cli -i ./pb_hooks/app/globals.css -o ./pb_public/assets/css/client.min.css --minify",
+    "build": "deno task 'build:*'",
+    "start": "./pocketbase serve"
+  },
+  "compilerOptions": {
+    "types": ["npm:@types/react", "npm:@types/react-dom", "npm:react-router"],
+    "lib": ["dom", "dom.iterable", "deno.ns"],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
+  },
+  "imports": {
+    "@/": "./pb_hooks/app/",
+    "@std/assert": "jsr:@std/assert@1",
+    "@tailwindcss/cli": "npm:@tailwindcss/cli@^4.1.11",
+    "@types/react": "npm:@types/react@^19.1.8",
+    "@types/react-dom": "npm:@types/react-dom@^19.1.6",
+    "react": "npm:react@^19.1.0",
+    "react-dom": "npm:react-dom@^19.1.0",
+    "react-router": "npm:react-router@^7.7.0",
+    "tailwindcss": "npm:tailwindcss@^4.1.11"
+  }
+}
