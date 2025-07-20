@@ -10,6 +10,7 @@
     "npm:@types/react@*": "19.1.8",
     "npm:@types/react@^19.1.8": "19.1.8",
     "npm:nodemon@*": "3.1.10",
+    "npm:pocketbase@~0.26.1": "0.26.1",
     "npm:react-dom@^19.1.0": "19.1.0_react@19.1.0",
     "npm:react-router@*": "7.7.0_react@19.1.0_react-dom@19.1.0__react@19.1.0",
     "npm:react-router@^7.7.0": "7.7.0_react@19.1.0_react-dom@19.1.0__react@19.1.0",
@@ -571,6 +572,9 @@
     "picomatch@2.3.1": {
       "integrity": "sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA=="
     },
+    "pocketbase@0.26.1": {
+      "integrity": "sha512-fjcPDpxyqTZCwqGUTPUV7vssIsNMqHxk9GxbhxYHPEf18RqX2d9cpSqbbHk7aas30jqkgptuKfG7aY/Mytjj3g=="
+    },
     "pstree.remy@1.1.8": {
       "integrity": "sha512-77DZwxQmxKnu3aR542U+X8FypNzbfJ+C5XQDk3uWjWxn6151aIMGthWYRXTqT1E5oJvg+ljaa2OJi+VfvCOQ8w=="
     },
@@ -672,6 +676,7 @@
       "npm:@types/react-dom@^19.1.6",
       "npm:@types/react@*",
       "npm:@types/react@^19.1.8",
+      "npm:pocketbase@~0.26.1",
       "npm:react-dom@^19.1.0",
       "npm:react-router@*",
       "npm:react-router@^7.7.0",

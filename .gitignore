@@ -1,3 +1,4 @@
 /node_modules
 /pb_data
 /pocketbase*
+/pb_migrations

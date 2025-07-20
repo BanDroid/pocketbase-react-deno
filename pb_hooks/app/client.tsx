@@ -4,6 +4,7 @@ import { RouterProvider } from "react-router/dom";
 import RootLayout from "@/root.tsx";
 import { default as HomePage } from "@/pages/home/index.tsx";
 import { default as AboutPage } from "@/pages/about/index.tsx";
+import { default as PostPage } from "@/pages/posts/[id].tsx";
 import Error from "./pages/error.tsx";
 
 createRoot(document.getElementById("root")!).render(
@@ -22,6 +23,10 @@ createRoot(document.getElementById("root")!).render(
             {
               path: "/about",
               element: <AboutPage />,
+            },
+            {
+              path: "/posts/:id",
+              element: <PostPage />,
             },
           ],
         },

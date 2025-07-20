@@ -1,3 +1,15 @@
+import TaskForm from "../../component/task-form.tsx";
+import Tasks from "../../component/task-paginated.tsx";
+
 export default function Page() {
-  return <div>Beranda</div>;
+  return (
+    <>
+      <section>
+        <TaskForm />
+      </section>
+      <section>
+        <Tasks />
+      </section>
+    </>
+  );
 }
