@@ -7,40 +7,13 @@ routerAdd("GET", "/{$}", (event) => {
     template: $template,
     hooksDir: __hooks,
     data: {
-      title: "Beranda",
+      title: "Home",
     },
   });
 });
 
-routerAdd("GET", "/posts/{$}", (event) => {
+routerAdd("GET", "/redirect/{$}", (event) => {
   event.redirect(301, "/");
-});
-
-routerAdd("GET", "/posts/{id}", (event) => {
-  const utils = require(`${__hooks}/utils.js`);
-  const id = event.request.pathValue("id");
-  try {
-    const record = $app.findRecordById("tasks", id);
-    return utils.renderReact({
-      event,
-      template: $template,
-      hooksDir: __hooks,
-      data: {
-        title: record.getString("task"),
-        task: record.publicExport(),
-      },
-    });
-  } catch (error) {
-    return utils.renderReact({
-      event,
-      template: $template,
-      hooksDir: __hooks,
-      data: {
-        title: "Task not found",
-        status: error.value?.status || 404,
-      },
-    });
-  }
 });
 
 routerUse((event) => {

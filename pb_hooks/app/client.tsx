@@ -24,10 +24,6 @@ createRoot(document.getElementById("root")!).render(
               path: "/about",
               element: <AboutPage />,
             },
-            {
-              path: "/posts/:id",
-              element: <PostPage />,
-            },
           ],
         },
       ])}
